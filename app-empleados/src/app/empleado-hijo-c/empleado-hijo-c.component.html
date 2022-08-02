@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div>
+        <a [routerLink]="['/actualizar', indice]">
+          {{empleadoDeLista.nombre}}
+          {{empleadoDeLista.apellido}}
+        </a>
+        <span
+          [ngClass]="{claseCargo: empleadoDeLista.cargo == empleadoDeLista.cargo}">{{empleadoDeLista.cargo}}</span>&nbsp;
+        <span [ngStyle]="{color: empleadoDeLista.salario >= 16000 ? 'red' : 'black'}">{{empleadoDeLista.salario}}</span>
+      </div>
+      <app-caracteristicas-empleado-c (caracteristicasEmpleados)="agregarCaracteristica($event)">
+      </app-caracteristicas-empleado-c>
+      <ul>
+        <li *ngFor="let caracteristica of arrayCaracteristicas">{{caracteristica}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

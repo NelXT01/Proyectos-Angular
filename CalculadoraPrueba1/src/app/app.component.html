@@ -1,0 +1,23 @@
+<body>
+  <div class="titulo">
+    <h1>Calculadora Prueba</h1>
+    <h2>By: Nelson.T</h2>
+  </div>
+  <div>
+    <form class="formulario">
+      <div class="intro">
+        <p>PRIMER NUMERO</p><input type="number" [(ngModel)]="num1" name="numero1">
+        <p>SEGUNDO NUMERO</p><input type="number" [(ngModel)]="num2" name="numero2">
+        <p>RESULTADO</p>
+        <p>{{resultado}}</p>
+      </div>
+      <div>
+        <button type="submit" class="buttons" (click)="sumar()">Sumar</button><br>
+        <button type="submit" class="buttons" (click)="restar()">Restar</button><br>
+        <button type="submit" class="buttons" (click)="multi()">Multiplicar</button><br>
+        <button type="submit" class="buttons" (click)="divide()">Dividir</button>
+      </div>
+
+    </form>
+  </div>
+</body>
